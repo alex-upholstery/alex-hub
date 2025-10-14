@@ -1,0 +1,589 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Regular.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Regular.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Regular.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Regular.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Regular.svg#Gilroy-Regular) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-RegularItalic.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-RegularItalic.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-RegularItalic.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-RegularItalic.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-RegularItalic.svg#Gilroy-RegularItalic) format('svg');
+    font-display: swap;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Medium.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Medium.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Medium.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Medium.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Medium.svg#Gilroy-Medium) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-MediumItalic.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-MediumItalic.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-MediumItalic.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-MediumItalic.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-MediumItalic.svg#Gilroy-MediumItalic) format('svg');
+    font-display: swap;
+    font-style: italic;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-SemiBold.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-SemiBold.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-SemiBold.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-SemiBold.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-SemiBold.svg#Gilroy-SemiBold) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-SemiBoldItalic.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-SemiBoldItalic.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-SemiBoldItalic.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-SemiBoldItalic.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-SemiBoldItalic.svg#Gilroy-SemiBoldItalic) format('svg');
+    font-display: swap;
+    font-style: italic;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Bold.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Bold.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Bold.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Bold.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-Bold.svg#Gilroy-Bold) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-BoldItalic.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-BoldItalic.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-BoldItalic.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-BoldItalic.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/Gilroy-BoldItalic.svg#Gilroy-BoldItalic) format('svg');
+    font-display: swap;
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+@font-face {
+    font-family: 'Noto Sans Thai';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Regular.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Regular.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Regular.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Regular.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Regular.svg#NotoSansThai-Regular) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Noto Sans Thai';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Medium.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Medium.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Medium.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Medium.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Medium.svg#NotoSansThai-Medium) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Noto Sans Thai';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-SemiBold.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-SemiBold.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-SemiBold.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-SemiBold.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-SemiBold.svg#NotoSansThai-SemiBold) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Noto Sans Thai';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Bold.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Bold.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Bold.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Bold.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansThai-Bold.svg#NotoSansThai-Bold) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Noto Sans SC';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Regular.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Regular.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Regular.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Regular.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Regular.svg#NotoSansSC-Regular) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Noto Sans SC';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Medium.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Medium.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Medium.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Medium.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Medium.svg#NotoSansSC-Medium) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Noto Sans SC';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-SemiBold.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-SemiBold.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-SemiBold.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-SemiBold.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-SemiBold.svg#NotoSansSC-SemiBold) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Noto Sans SC';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Bold.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Bold.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Bold.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Bold.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansSC-Bold.svg#NotoSansSC-Bold) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Regular.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Regular.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Regular.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Regular.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Regular.svg#NotoSansTC-Regular) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Medium.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Medium.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Medium.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Medium.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Medium.svg#NotoSansTC-Medium) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-SemiBold.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-SemiBold.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-SemiBold.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-SemiBold.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-SemiBold.svg#NotoSansTC-SemiBold) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    src: url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Bold.eot?#iefix) format('embedded-opentype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Bold.woff2) format('woff2'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Bold.woff) format('woff'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Bold.ttf) format('truetype'),
+    url(https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansTC-Bold.svg#NotoSansTC-Bold) format('svg');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+}
+/*20240418 Promotions use Start*/
+@font-face {
+    font-family: 'SF Distant Galaxy Alternate';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SFDistantGalaxyAlternate.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SFDistantGalaxyAlternate.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SFDistantGalaxyAlternate.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SFDistantGalaxyAlternate.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SFDistantGalaxyAlternate.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SFDistantGalaxyAlternate.svg#SFDistantGalaxyAlternate') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*20240418 Promotions use End*/
+
+/*20240606 Promotions use Start*/
+@font-face {
+    font-family: 'Designer';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/DesignerRegular.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/DesignerRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/DesignerRegular.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/DesignerRegular.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/DesignerRegular.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/DesignerRegular.svg#DesignerRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*20240606 Promotions use End*/
+
+/*KK Font Start*/
+@font-face {
+    font-family: 'Gilroy-kk';
+    src: url('fonts-kk/Gilroy-Regular.eot');
+    src: url('fonts-kk/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts-kk/Gilroy-Regular.woff2') format('woff2'),
+        url('fonts-kk/Gilroy-Regular.woff') format('woff'),
+        url('fonts-kk/Gilroy-Regular.ttf') format('truetype'),
+        url('fonts-kk/Gilroy-Regular.svg#Gilroy-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gilroy-kk';
+    src: url('fonts-kk/Gilroy-Medium.eot');
+    src: url('fonts-kk/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts-kk/Gilroy-Medium.woff2') format('woff2'),
+        url('fonts-kk/Gilroy-Medium.woff') format('woff'),
+        url('fonts-kk/Gilroy-Medium.ttf') format('truetype'),
+        url('fonts-kk/Gilroy-Medium.svg#Gilroy-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy-kk';
+    src: url('fonts-kk/Gilroy-Semibold.eot');
+    src: url('fonts-kk/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('fonts-kk/Gilroy-Semibold.woff2') format('woff2'),
+        url('fonts-kk/Gilroy-Semibold.woff') format('woff'),
+        url('fonts-kk/Gilroy-Semibold.ttf') format('truetype'),
+        url('fonts-kk/Gilroy-Semibold.svg#Gilroy-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gilroy-kk';
+    src: url('fonts-kk/Gilroy-Bold.eot');
+    src: url('fonts-kk/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts-kk/Gilroy-Bold.woff2') format('woff2'),
+        url('fonts-kk/Gilroy-Bold.woff') format('woff'),
+        url('fonts-kk/Gilroy-Bold.ttf') format('truetype'),
+        url('fonts-kk/Gilroy-Bold.svg#Gilroy-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+/*KK Font End*/
+
+/*AR Font Start*/
+@font-face {
+    font-family: 'Noto Sans Arabic';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Regular.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Regular.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Regular.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Regular.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Regular.svg#NotoSansArabic-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans Arabic';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Medium.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Medium.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Medium.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Medium.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Medium.svg#NotoSansArabic-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans Arabic';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-SemiBold.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-SemiBold.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-SemiBold.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-SemiBold.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-SemiBold.svg#NotoSansArabic-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans Arabic';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Bold.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Bold.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Bold.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Bold.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansArabic-Bold.svg#NotoSansArabic-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+/*AR Font End*/
+
+
+
+/*KO Font Start*/
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Regular.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Regular.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Regular.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Regular.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Regular.svg#NotoSansKR-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Medium.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Medium.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Medium.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Medium.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Medium.svg#NotoSansKR-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-SemiBold.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-SemiBold.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-SemiBold.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-SemiBold.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-SemiBold.svg#NotoSansKR-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Bold.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Bold.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Bold.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Bold.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansKR-Bold.svg#NotoSansKR-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*KO Font End*/
+
+
+/*LAOs Font Begin*/
+@font-face {
+    font-family: 'Noto Sans Lao';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Regular.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Regular.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Regular.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Regular.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Regular.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Regular.svg#NotoSansLao-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Lao';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Bold.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Bold.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Bold.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Bold.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Bold.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Bold.svg#NotoSansLao-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Lao';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Medium.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Medium.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Medium.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Medium.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Medium.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Medium.svg#NotoSansLao-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Lao';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Black.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Black.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Black.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Black.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Black.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-Black.svg#NotoSansLao-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans Lao';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-SemiBold.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-SemiBold.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-SemiBold.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-SemiBold.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/NotoSansLao-SemiBold.svg#NotoSansLao-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+/*LAOs Font End*/
+
+/*VI Font Start*/
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBold.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBold.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBold.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBold.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBold.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBold.svg#SVN-GilroyBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMedium.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMedium.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMedium.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMedium.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMedium.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMedium.svg#SVN-GilroyMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBoldItalic.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBoldItalic.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBoldItalic.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBoldItalic.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyBoldItalic.svg#SVN-GilroyBoldItalic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMediumItalic.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMediumItalic.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMediumItalic.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMediumItalic.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroyMediumItalic.svg#SVN-GilroyMediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBold.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBold.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBold.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBold.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBold.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBold.svg#SVN-GilroySemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBoldItalic.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBoldItalic.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBoldItalic.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBoldItalic.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-GilroySemiBoldItalic.svg#SVN-GilroySemiBoldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-Gilroy.eot');
+    src: url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-Gilroy.eot?#iefix') format('embedded-opentype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-Gilroy.woff2') format('woff2'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-Gilroy.woff') format('woff'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-Gilroy.ttf') format('truetype'),
+        url('https://d21u74ttq7jqzf.cloudfront.net/font/SVN-Gilroy.svg#SVN-Gilroy') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+/*VI Font End*/
