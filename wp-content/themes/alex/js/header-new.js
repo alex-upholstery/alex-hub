@@ -542,7 +542,7 @@ function menuDataRender(data) {
                 return bLeft - aRight;
             }
             initNavigation();
-            jQuery(".header-menu-item.sponsorship").append('<video class="ferrari-git" id="ferrari-video" src="https://d21u74ttq7jqzf.cloudfront.net/image/f1-car_H40px.mp4" autoplay muted preload webkit-playsinline="true" playsinline="true" x5-video-player-type="h5-page"></video> <img class="ferrari-gif" src="https://d21u74ttq7jqzf.cloudfront.net/image/banner-gif-new.gif" alt="" width="20" height="17.4">');
+            jQuery(".header-menu-item.sponsorship").append('<video class="ferrari-git" id="ferrari-video" src="/vidz/couch.mp4" autoplay muted preload webkit-playsinline="true" playsinline="true" x5-video-player-type="h5-page"></video>');
         
 
         var ferrariVideo = jQuery("#ferrari-video"),
