@@ -1,0 +1,218 @@
+/* https://www.hideyt.com/ */
+
+/* Reset CSS */
+.hytWPOverlay {
+    bottom : auto;
+    left : auto;
+    right : auto;
+    top : auto;
+    width : auto;
+    height : auto;
+    
+    animation : none!important;
+    animation-delay : 0!important;
+    animation-direction : normal!important;
+    animation-duration : 0!important;
+    animation-fill-mode : none!important;
+    animation-iteration-count : 1!important;
+    animation-name : none!important;
+    animation-play-state : running!important;
+    animation-timing-function : ease!important;
+    backface-visibility : visible!important;
+    background : 0;
+    border : 0!important;
+    border-style : none!important;
+    border-width : medium!important;
+    border-color : inherit!important;
+    border-bottom : 0!important;
+    border-bottom-color : inherit!important;
+    border-bottom-left-radius : 0!important;
+    border-bottom-right-radius : 0!important;
+    border-bottom-style : none!important;
+    border-bottom-width : medium!important;
+    border-collapse : separate!important;
+    border-image : none!important;
+    border-left : 0!important;
+    border-left-color : inherit!important;
+    border-left-style : none!important;
+    border-left-width : medium!important;
+    border-radius : 0!important;
+    border-right : 0!important;
+    border-right-color : inherit!important;
+    border-right-style : none!important;
+    border-right-width : medium!important;
+    border-spacing : 0!important;
+    border-top : 0!important;
+    border-top-color : inherit!important;
+    border-top-left-radius : 0!important;
+    border-top-right-radius : 0!important;
+    border-top-style : none!important;
+    border-top-width : medium!important;
+    box-shadow : none!important;
+    box-sizing : content-box!important;
+    caption-side : top!important;
+    clear : none!important;
+    clip : auto!important;
+    color : inherit!important;
+    columns : auto!important;
+    column-count : auto!important;
+    column-fill : balance!important;
+    column-gap : normal!important;
+    column-rule : medium none currentColor!important;
+    column-rule-color : currentColor!important;
+    column-rule-style : none!important;
+    column-rule-width : none!important;
+    column-span : 1!important;
+    column-width : auto!important;
+    content : normal!important;
+    counter-increment : none!important;
+    counter-reset : none!important;
+    cursor : auto!important;
+    direction : ltr!important;
+    /*display : inline!important;*/
+    empty-cells : show!important;
+    float : none!important;
+    font : normal!important;
+    font-family : inherit!important;
+    font-size : medium!important;
+    font-style : normal!important;
+    font-variant : normal!important;
+    font-weight : normal!important;
+    hyphens : none!important;
+    letter-spacing : normal!important;
+    line-height : normal!important;
+    list-style : none!important;
+    list-style-image : none!important;
+    list-style-position : outside!important;
+    list-style-type : disc!important;
+    margin : 0!important;
+    margin-bottom : 0!important;
+    margin-left : 0!important;
+    margin-right : 0!important;
+    margin-top : 0!important;
+    max-height : none!important;
+    max-width : none!important;
+    min-height : 0!important;
+    min-width : 0!important;
+    opacity : 1!important;
+    orphans : 0!important;
+    outline : 0!important;
+    outline-color : invert!important;
+    outline-style : none!important;
+    outline-width : medium!important;
+    overflow : visible!important;
+    overflow-x : visible!important;
+    overflow-y : visible!important;
+    padding : 0!important;
+    padding-bottom : 0!important;
+    padding-left : 0!important;
+    padding-right : 0!important;
+    padding-top : 0!important;
+    page-break-after : auto!important;
+    page-break-before : auto!important;
+    page-break-inside : auto!important;
+    perspective : none!important;
+    perspective-origin : 50% 50%!important;
+    /*position : static!important;*/
+    /* May need to alter quotes for different locales (e.g fr) */
+    quotes : '\201C' '\201D' '\2018' '\2019'!important;
+    tab-size : 8!important;
+    table-layout : auto!important;
+    text-align : inherit!important;
+    text-align-last : auto!important;
+    text-decoration : none!important;
+    text-decoration-color : inherit!important;
+    text-decoration-line : none!important;
+    text-decoration-style : solid!important;
+    text-indent : 0!important;
+    text-shadow : none!important;
+    text-transform : none!important;
+    transform : none!important;
+    transform-style : flat!important;
+    transition : none!important;
+    transition-delay : 0s!important;
+    transition-duration : 0s!important;
+    transition-property : none!important;
+    transition-timing-function : ease!important;
+    unicode-bidi : normal!important;
+    vertical-align : baseline!important;
+    visibility : visible!important;
+    white-space : normal!important;
+    widows : 0!important;
+    word-spacing : normal!important;
+    /* basic modern patch */
+    all: initial;
+    all: unset;
+}
+
+.hytWPOverlay {
+    position: absolute!important;
+    pointer-events: none!important;
+    will-change: transform;
+}
+
+.hytWPOverlay.ended::after {
+    content:"";
+    pointer-events: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: black;
+    background-image: url(data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgNTEwIDUxMCI+PHBhdGggZD0iTTI1NSAxMDJWMEwxMjcuNSAxMjcuNSAyNTUgMjU1VjE1M2M4NC4xNSAwIDE1MyA2OC44NSAxNTMgMTUzcy02OC44NSAxNTMtMTUzIDE1My0xNTMtNjguODUtMTUzLTE1M0g1MWMwIDExMi4yIDkxLjggMjA0IDIwNCAyMDRzMjA0LTkxLjggMjA0LTIwNC05MS44LTIwNC0yMDQtMjA0eiIgZmlsbD0iI0ZGRiIvPjwvc3ZnPg==);
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-position: center, center, center;
+    background-size: 64px 64px, 1px 1px, cover;
+}
+
+.hytWPOverlay.paused::after {
+    content:"";
+    pointer-events: auto;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    bottom: 50px;
+    right: 0;
+    cursor: pointer;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 40px 40px;
+    background-image: url(data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHdpZHRoPSIxNzA2LjY2NyIgaGVpZ2h0PSIxNzA2LjY2NyIgdmlld0JveD0iMCAwIDEyODAgMTI4MCI+PHBhdGggZD0iTTE1Ny42MzUgMi45ODRMMTI2MC45NzkgNjQwIDE1Ny42MzUgMTI3Ny4wMTZ6IiBmaWxsPSIjZmZmIi8+PC9zdmc+);
+}
+
+.hytWPOverlay.paused.fullHiding::after {
+    bottom: 0;
+    top: 0;
+}
+
+.hytWPPlayerWrapExpired {
+    position: absolute;
+    pointer-events: auto;
+    font-size: 14px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: darkred;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.1;
+    z-index: 1;
+}
+
+.hytWPPlayerWrapExpired p {
+    margin: 5px 0;
+}
+
+.hytWPPlayerWrapExpired a, .hytWPPlayerWrapExpired a:visited {
+    color: #ffa5a5 !important;
+    text-decoration: underline !important;
+    font-weight: bold;
+}
+
+.hytWPPlayerWrapExpired a:hover {
+    color: white !important;
+}
