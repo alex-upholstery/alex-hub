@@ -1,0 +1,1170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Upholstery — My Account</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --cream: #f5f0e8;
+        --cream-dark: #ede5d4;
+        --charcoal: #fca015;
+        --charcoal-mid: #3d3832;
+        --gold: #b8935a;
+        --gold-light: #d4b07a;
+        --gold-pale: #f0e4cc;
+        --text-muted: #7a7165;
+        --border: rgba(90, 80, 65, 0.18);
+        --border-focus: #b8935a;
+        --white: #fdfaf5;
+      }
+
+      body {
+        background-color: var(--charcoal);
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        color: var(--charcoal);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .page-wrapper {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      .brand {
+        text-align: center;
+        margin-bottom: 36px;
+      }
+
+      .brand-logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        text-decoration: none;
+      }
+
+      .brand-emblem {
+        width: 52px;
+        height: 52px;
+        border: 0px solid var(--gold);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .brand-emblem::before {
+        content: "";
+        position: absolute;
+        inset: 4px;
+        border: 0px solid rgba(184, 147, 90, 0.4);
+      }
+
+      .brand-emblem svg {
+        width: 26px;
+        height: 26px;
+        fill: var(--gold);
+      }
+
+      .brand-text {
+        text-align: left;
+      }
+
+      .brand-name {
+        font-family: "Playfair Display", serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: var(--cream);
+        letter-spacing: 0.02em;
+        line-height: 1.1;
+      }
+
+      .brand-tagline {
+        font-size: 10px;
+        color: var(--gold-light);
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-top: 3px;
+      }
+
+      .auth-card {
+        background: var(--white);
+        width: 100%;
+        max-width: 460px;
+        border-top: 3px solid var(--gold);
+        box-shadow:
+          0 24px 80px rgba(0, 0, 0, 0.45),
+          0 2px 6px rgba(0, 0, 0, 0.25);
+      }
+
+      .tab-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .tab-btn {
+        padding: 18px 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: "Lato", sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--text-muted);
+        transition:
+          color 0.25s,
+          background 0.25s;
+        position: relative;
+      }
+
+      .tab-btn::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 20%;
+        right: 20%;
+        height: 2px;
+        background: var(--gold);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+
+      .tab-btn.active {
+        color: var(--charcoal);
+        background: var(--gold-pale);
+      }
+      .tab-btn.active::after {
+        transform: scaleX(1);
+      }
+      .tab-btn:hover:not(.active) {
+        color: var(--charcoal-mid);
+        background: rgba(184, 147, 90, 0.06);
+      }
+
+      .form-panel {
+        display: none;
+        padding: 36px 40px 40px;
+      }
+      .form-panel.active {
+        display: block;
+        animation: fadeUp 0.3s ease;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .panel-title {
+        font-family: "Playfair Display", serif;
+        font-size: 26px;
+        font-weight: 400;
+        color: var(--charcoal);
+        margin-bottom: 4px;
+        line-height: 1.2;
+      }
+
+      .panel-title em {
+        font-style: italic;
+        color: var(--gold);
+      }
+
+      .panel-subtitle {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+        font-weight: 300;
+      }
+
+      .field-group {
+        margin-bottom: 18px;
+      }
+
+      .field-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .field-label {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: var(--charcoal-mid);
+        margin-bottom: 7px;
+      }
+
+      .field-input {
+        width: 100%;
+        padding: 11px 14px;
+        border: 1px solid var(--border);
+        background: var(--cream);
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--charcoal);
+        outline: none;
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+        border-radius: 0;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+
+      .field-input::placeholder {
+        color: rgba(90, 80, 65, 0.38);
+      }
+      .field-input:focus {
+        border-color: var(--gold);
+        background: var(--white);
+      }
+      .field-input.input-error {
+        border-color: #c0392b !important;
+      }
+
+      .password-wrapper {
+        position: relative;
+      }
+      .password-wrapper .field-input {
+        padding-right: 42px;
+      }
+
+      .toggle-pw {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--text-muted);
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        transition: color 0.2s;
+      }
+      .toggle-pw:hover {
+        color: var(--gold);
+      }
+
+      .forgot-link {
+        display: block;
+        text-align: right;
+        font-size: 12px;
+        color: var(--gold);
+        text-decoration: none;
+        margin-top: -10px;
+        margin-bottom: 22px;
+        letter-spacing: 0.03em;
+        transition: color 0.2s;
+      }
+      .forgot-link:hover {
+        color: var(--charcoal);
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 22px 0;
+      }
+      .divider-line {
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+      }
+      .divider-text {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+      }
+
+      .social-btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 11px 0;
+        border: 1px solid var(--border);
+        background: var(--white);
+        font-family: "Lato", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--charcoal-mid);
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          border-color 0.2s;
+        letter-spacing: 0.02em;
+      }
+      .social-btn:hover {
+        background: var(--cream-dark);
+        border-color: rgba(90, 80, 65, 0.3);
+      }
+      .social-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      .social-icon {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
+
+      .btn-primary {
+        width: 100%;
+        padding: 14px 0;
+        background: var(--charcoal);
+        color: var(--cream);
+        border: none;
+        font-family: "Lato", sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.25s;
+        position: relative;
+        overflow: hidden;
+        margin-top: 4px;
+      }
+
+      .btn-primary::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--gold);
+        transform: translateX(-101%);
+        transition: transform 0.35s ease;
+      }
+
+      .btn-primary span {
+        position: relative;
+        z-index: 1;
+      }
+      .btn-primary:hover::before {
+        transform: translateX(0);
+      }
+      .btn-primary:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+      .btn-primary:disabled::before {
+        display: none;
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      .checkbox-group input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+        min-width: 15px;
+        accent-color: var(--gold);
+        margin-top: 2px;
+        cursor: pointer;
+      }
+
+      .checkbox-label {
+        font-size: 12px;
+        color: var(--text-muted);
+        line-height: 1.5;
+      }
+      .checkbox-label a {
+        color: var(--gold);
+        text-decoration: none;
+      }
+      .checkbox-label a:hover {
+        text-decoration: underline;
+      }
+
+      .benefits-strip {
+        background: var(--cream-dark);
+        padding: 14px 40px;
+        display: none;
+        gap: 0;
+        border-top: 1px solid var(--border);
+      }
+      .benefits-strip.active {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 24px;
+      }
+
+      .benefit-item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 11.5px;
+        color: var(--charcoal-mid);
+        letter-spacing: 0.02em;
+      }
+      .benefit-dot {
+        width: 5px;
+        height: 5px;
+        background: var(--gold);
+        flex-shrink: 0;
+      }
+
+      .card-footer {
+        text-align: center;
+        padding: 14px 40px 20px;
+        background: var(--cream);
+        border-top: 1px solid var(--border);
+        font-size: 12px;
+        color: var(--text-muted);
+      }
+      .card-footer a {
+        color: var(--gold);
+        text-decoration: none;
+        font-weight: 400;
+      }
+      .card-footer a:hover {
+        text-decoration: underline;
+      }
+
+      .page-footer {
+        text-align: center;
+        padding: 24px;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        color: rgba(245, 240, 232, 0.28);
+      }
+
+      .strength-meter {
+        margin-top: 7px;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+      .strength-bar {
+        flex: 1;
+        height: 3px;
+        background: var(--border);
+        transition: background 0.3s;
+      }
+      .strength-bar.weak {
+        background: #c0392b;
+      }
+      .strength-bar.fair {
+        background: var(--gold);
+      }
+      .strength-bar.strong {
+        background: #27ae60;
+      }
+      .strength-label {
+        font-size: 11px;
+        color: var(--text-muted);
+        min-width: 42px;
+        text-align: right;
+      }
+
+      /* Toast notification */
+      .toast {
+        position: fixed;
+        bottom: 28px;
+        left: 50%;
+        transform: translateX(-50%) translateY(20px);
+        padding: 12px 24px;
+        border-radius: 2px;
+        font-family: "Lato", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        color: #fff;
+        opacity: 0;
+        pointer-events: none;
+        transition:
+          opacity 0.3s,
+          transform 0.3s;
+        z-index: 9999;
+        max-width: 360px;
+        text-align: center;
+      }
+      .toast.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        pointer-events: auto;
+      }
+      .toast.success {
+        background: #27ae60;
+      }
+      .toast.error {
+        background: #c0392b;
+      }
+      .toast.info {
+        background: var(--gold);
+      }
+
+      /* Loading spinner inside button */
+      .btn-spinner {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 0.7s linear infinite;
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (max-width: 500px) {
+        .form-panel {
+          padding: 28px 24px 32px;
+        }
+        .benefits-strip {
+          padding: 12px 24px;
+        }
+        .card-footer {
+          padding: 12px 24px 16px;
+        }
+        .field-row {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        .brand-name {
+          font-size: 19px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Brand Header -->
+      <div class="brand">
+        <a href="https://www.alex-upholstery.co.za" class="brand-logo">
+          <div class="brand-emblem">
+            <img
+              src="/wp-content/uploads/2025/05/Untitled-1.png"
+              alt="Alex Upholstery Logo"
+              width="96"
+              height="auto"
+            />
+          </div>
+        </a>
+      </div>
+
+      <!-- Auth Card -->
+      <div class="auth-card" role="main">
+        <!-- Tab Bar -->
+        <div class="tab-bar" role="tablist">
+          <button
+            class="tab-btn active"
+            role="tab"
+            aria-selected="true"
+            onclick="switchTab('login')"
+            id="tab-login"
+          >
+            Sign In
+          </button>
+          <button
+            class="tab-btn"
+            role="tab"
+            aria-selected="false"
+            onclick="switchTab('register')"
+            id="tab-register"
+          >
+            Create Account
+          </button>
+        </div>
+
+        <!-- LOGIN PANEL -->
+        <div
+          class="form-panel active"
+          id="panel-login"
+          role="tabpanel"
+          aria-labelledby="tab-login"
+        >
+          <h1 class="panel-title">Welcome <em>back</em></h1>
+          <p class="panel-subtitle">
+            Sign in to manage your bookings and projects
+          </p>
+
+          <div class="field-group">
+            <label class="field-label" for="login-email">Email Address</label>
+            <input
+              class="field-input"
+              type="email"
+              id="login-email"
+              placeholder="you@example.com"
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="login-password">Password</label>
+            <div class="password-wrapper">
+              <input
+                class="field-input"
+                type="password"
+                id="login-password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+              />
+              <button
+                class="toggle-pw"
+                type="button"
+                onclick="togglePw('login-password', this)"
+                aria-label="Show password"
+              >
+                <svg
+                  class="social-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <a href="#" class="forgot-link" id="forgot-link"
+            >Forgot your password?</a
+          >
+
+          <button
+            class="btn-primary"
+            type="button"
+            id="btn-login"
+            onclick="handleLogin()"
+          >
+            <span>Sign In to Your Account</span>
+          </button>
+
+          <div class="divider">
+            <div class="divider-line"></div>
+            <span class="divider-text">or continue with</span>
+            <div class="divider-line"></div>
+          </div>
+
+          <button
+            class="social-btn"
+            type="button"
+            id="btn-google-login"
+            onclick="handleGoogleSignIn()"
+          >
+            <svg class="social-icon" viewBox="0 0 24 24">
+              <path
+                fill="#4285F4"
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              />
+              <path
+                fill="#34A853"
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              />
+              <path
+                fill="#FBBC05"
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+              />
+              <path
+                fill="#EA4335"
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              />
+            </svg>
+            Continue with Google
+          </button>
+        </div>
+
+        <!-- REGISTER PANEL -->
+        <div
+          class="form-panel"
+          id="panel-register"
+          role="tabpanel"
+          aria-labelledby="tab-register"
+        >
+          <h1 class="panel-title">Join <em>Alex</em> Upholstery</h1>
+          <p class="panel-subtitle">
+            Create an account to book services and track your projects
+          </p>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label class="field-label" for="reg-firstname">First Name</label>
+              <input
+                class="field-input"
+                type="text"
+                id="reg-firstname"
+                placeholder="Jane"
+                autocomplete="given-name"
+              />
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="reg-lastname">Last Name</label>
+              <input
+                class="field-input"
+                type="text"
+                id="reg-lastname"
+                placeholder="Smith"
+                autocomplete="family-name"
+              />
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="reg-email">Email Address</label>
+            <input
+              class="field-input"
+              type="email"
+              id="reg-email"
+              placeholder="you@example.com"
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="reg-phone">Phone Number</label>
+            <input
+              class="field-input"
+              type="tel"
+              id="reg-phone"
+              placeholder="+27 82 000 0000"
+              autocomplete="tel"
+            />
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="reg-password"
+              >Create Password</label
+            >
+            <div class="password-wrapper">
+              <input
+                class="field-input"
+                type="password"
+                id="reg-password"
+                placeholder="Minimum 8 characters"
+                autocomplete="new-password"
+                oninput="checkStrength(this.value)"
+              />
+              <button
+                class="toggle-pw"
+                type="button"
+                onclick="togglePw('reg-password', this)"
+                aria-label="Show password"
+              >
+                <svg
+                  class="social-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="strength-meter"
+              id="strength-meter"
+              style="display: none"
+            >
+              <div class="strength-bar" id="sb1"></div>
+              <div class="strength-bar" id="sb2"></div>
+              <div class="strength-bar" id="sb3"></div>
+              <div class="strength-bar" id="sb4"></div>
+              <span class="strength-label" id="strength-label"></span>
+            </div>
+          </div>
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="reg-terms" />
+            <label class="checkbox-label" for="reg-terms">
+              I agree to Alex Upholstery's
+              <a href="https://www.alex-upholstery.co.za">Terms of Service</a>
+              and
+              <a href="https://www.alex-upholstery.co.za">Privacy Policy</a>
+            </label>
+          </div>
+
+          <button
+            class="btn-primary"
+            type="button"
+            id="btn-register"
+            onclick="handleRegister()"
+          >
+            <span>Create My Account</span>
+          </button>
+
+          <div class="divider">
+            <div class="divider-line"></div>
+            <span class="divider-text">or</span>
+            <div class="divider-line"></div>
+          </div>
+
+          <button
+            class="social-btn"
+            type="button"
+            id="btn-google-register"
+            onclick="handleGoogleSignIn()"
+          >
+            <svg class="social-icon" viewBox="0 0 24 24">
+              <path
+                fill="#4285F4"
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              />
+              <path
+                fill="#34A853"
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              />
+              <path
+                fill="#FBBC05"
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"
+              />
+              <path
+                fill="#EA4335"
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              />
+            </svg>
+            Sign up with Google
+          </button>
+        </div>
+
+        <!-- Benefits strip -->
+        <div class="benefits-strip" id="benefits-strip">
+          <div class="benefit-item">
+            <div class="benefit-dot"></div>
+            Online booking
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-dot"></div>
+            Project tracking
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-dot"></div>
+            Quote requests
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-dot"></div>
+            Exclusive updates
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="card-footer">
+          <a href="https://www.alex-upholstery.co.za">← Back to website</a>
+          &nbsp;·&nbsp;
+          <a href="https://www.alex-upholstery.co.za">Contact us</a>
+        </div>
+      </div>
+      <!-- /.auth-card -->
+
+      <div class="page-footer">
+        © 2025 Alex Upholstery Creative &amp; Design · Centurion, South Africa
+      </div>
+    </div>
+    <!-- /.page-wrapper -->
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- =========================================================
+         FIREBASE SDK (v10 modular via CDN compat build)
+    ========================================================== -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+        createUserWithEmailAndPassword,
+        signInWithPopup,
+        GoogleAuthProvider,
+        sendPasswordResetEmail,
+        updateProfile,
+      } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+      // ── ✏️  REPLACE WITH YOUR FIREBASE CONFIG ──────────────────
+      const firebaseConfig = {
+        apiKey: "AIzaSyDzPOZc8_lU5Ys-TycBjmdF5Y5VRc5C6fo",
+        authDomain: "alexhub-cf001.firebaseapp.com",
+        projectId: "alexhub-cf001",
+        storageBucket: "alexhub-cf001.firebasestorage.app",
+        messagingSenderId: "685033038880",
+        appId: "1:685033038880:web:7760f510e1044c50478845",
+      };
+      // ────────────────────────────────────────────────────────────
+
+      const REDIRECT_URL = "https://www.alex-upholstery.co.za/shop";
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider();
+
+      // ── Helpers ──────────────────────────────────────────────────
+      function showToast(msg, type = "info") {
+        const t = document.getElementById("toast");
+        t.textContent = msg;
+        t.className = `toast ${type} show`;
+        clearTimeout(t._timer);
+        t._timer = setTimeout(() => t.classList.remove("show"), 4000);
+      }
+
+      function setLoading(btnId, loading, label) {
+        const btn = document.getElementById(btnId);
+        btn.disabled = loading;
+        btn.querySelector("span").innerHTML = loading
+          ? `<span class="btn-spinner"></span>${label}`
+          : label;
+      }
+
+      function firebaseError(err) {
+        const map = {
+          "auth/invalid-email": "Please enter a valid email address.",
+          "auth/user-not-found": "No account found with that email.",
+          "auth/wrong-password": "Incorrect password. Please try again.",
+          "auth/email-already-in-use":
+            "An account with this email already exists.",
+          "auth/weak-password": "Password must be at least 6 characters.",
+          "auth/too-many-requests":
+            "Too many attempts. Please try again later.",
+          "auth/popup-closed-by-user": "Google sign-in was cancelled.",
+          "auth/network-request-failed":
+            "Network error. Check your connection.",
+          "auth/invalid-credential": "Invalid email or password.",
+        };
+        return map[err.code] || "Something went wrong. Please try again.";
+      }
+
+      // ── Login ────────────────────────────────────────────────────
+      window.handleLogin = async function () {
+        const email = document.getElementById("login-email").value.trim();
+        const password = document.getElementById("login-password").value;
+
+        if (!email || !password) {
+          showToast("Please fill in all fields.", "error");
+          return;
+        }
+
+        setLoading("btn-login", true, "Signing in…");
+        try {
+          await signInWithEmailAndPassword(auth, email, password);
+          showToast("Welcome back! Redirecting…", "success");
+          setTimeout(() => (window.location.href = REDIRECT_URL), 1200);
+        } catch (err) {
+          showToast(firebaseError(err), "error");
+          setLoading("btn-login", false, "Sign In to Your Account");
+        }
+      };
+
+      // ── Register ─────────────────────────────────────────────────
+      window.handleRegister = async function () {
+        const firstName = document.getElementById("reg-firstname").value.trim();
+        const lastName = document.getElementById("reg-lastname").value.trim();
+        const email = document.getElementById("reg-email").value.trim();
+        const password = document.getElementById("reg-password").value;
+        const terms = document.getElementById("reg-terms").checked;
+
+        if (!firstName || !lastName || !email || !password) {
+          showToast("Please fill in all fields.", "error");
+          return;
+        }
+        if (!terms) {
+          showToast("Please accept the Terms of Service to continue.", "error");
+          return;
+        }
+        if (password.length < 8) {
+          showToast("Password must be at least 8 characters.", "error");
+          return;
+        }
+
+        setLoading("btn-register", true, "Creating account…");
+        try {
+          const cred = await createUserWithEmailAndPassword(
+            auth,
+            email,
+            password,
+          );
+          await updateProfile(cred.user, {
+            displayName: `${firstName} ${lastName}`,
+          });
+          showToast("Account created! Redirecting…", "success");
+          setTimeout(() => (window.location.href = REDIRECT_URL), 1200);
+        } catch (err) {
+          showToast(firebaseError(err), "error");
+          setLoading("btn-register", false, "Create My Account");
+        }
+      };
+
+      // ── Google Sign-In ───────────────────────────────────────────
+      window.handleGoogleSignIn = async function () {
+        const btnIds = ["btn-google-login", "btn-google-register"];
+        btnIds.forEach((id) => {
+          const b = document.getElementById(id);
+          if (b) b.disabled = true;
+        });
+        try {
+          await signInWithPopup(auth, provider);
+          showToast("Signed in with Google! Redirecting…", "success");
+          setTimeout(() => (window.location.href = REDIRECT_URL), 1200);
+        } catch (err) {
+          showToast(firebaseError(err), "error");
+        } finally {
+          btnIds.forEach((id) => {
+            const b = document.getElementById(id);
+            if (b) b.disabled = false;
+          });
+        }
+      };
+
+      // ── Forgot Password ──────────────────────────────────────────
+      document
+        .getElementById("forgot-link")
+        .addEventListener("click", async (e) => {
+          e.preventDefault();
+          const email = document.getElementById("login-email").value.trim();
+          if (!email) {
+            showToast("Enter your email address above first.", "info");
+            return;
+          }
+          try {
+            await sendPasswordResetEmail(auth, email);
+            showToast(
+              "Password reset email sent! Check your inbox.",
+              "success",
+            );
+          } catch (err) {
+            showToast(firebaseError(err), "error");
+          }
+        });
+
+      // ── Enter-key support ────────────────────────────────────────
+      document
+        .getElementById("login-password")
+        .addEventListener("keydown", (e) => {
+          if (e.key === "Enter") window.handleLogin();
+        });
+      document
+        .getElementById("reg-password")
+        .addEventListener("keydown", (e) => {
+          if (e.key === "Enter") window.handleRegister();
+        });
+    </script>
+
+    <!-- Non-module helpers (tab switching, UI utils) -->
+    <script>
+      function switchTab(tab) {
+        document
+          .getElementById("panel-login")
+          .classList.toggle("active", tab === "login");
+        document
+          .getElementById("panel-register")
+          .classList.toggle("active", tab === "register");
+        document
+          .getElementById("tab-login")
+          .classList.toggle("active", tab === "login");
+        document
+          .getElementById("tab-register")
+          .classList.toggle("active", tab === "register");
+        document
+          .getElementById("tab-login")
+          .setAttribute("aria-selected", tab === "login");
+        document
+          .getElementById("tab-register")
+          .setAttribute("aria-selected", tab === "register");
+        document
+          .getElementById("benefits-strip")
+          .classList.toggle("active", tab === "register");
+      }
+
+      function togglePw(inputId, btn) {
+        const input = document.getElementById(inputId);
+        const isText = input.type === "text";
+        input.type = isText ? "password" : "text";
+        btn.innerHTML = isText
+          ? '<svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>'
+          : '<svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>';
+      }
+
+      function checkStrength(val) {
+        const meter = document.getElementById("strength-meter");
+        const label = document.getElementById("strength-label");
+        const bars = ["sb1", "sb2", "sb3", "sb4"];
+
+        if (!val) {
+          meter.style.display = "none";
+          return;
+        }
+        meter.style.display = "flex";
+
+        let score = 0;
+        if (val.length >= 8) score++;
+        if (/[A-Z]/.test(val)) score++;
+        if (/[0-9]/.test(val)) score++;
+        if (/[^A-Za-z0-9]/.test(val)) score++;
+
+        bars.forEach((id, i) => {
+          const el = document.getElementById(id);
+          el.className = "strength-bar";
+          if (i < score)
+            el.classList.add(
+              score <= 1 ? "weak" : score <= 2 ? "fair" : "strong",
+            );
+        });
+
+        label.textContent =
+          score <= 1
+            ? "Weak"
+            : score <= 2
+              ? "Fair"
+              : score === 3
+                ? "Good"
+                : "Strong";
+        label.style.color =
+          score <= 1 ? "#c0392b" : score <= 2 ? "#B8935A" : "#27ae60";
+      }
+    </script>
+  </body>
+</html>
